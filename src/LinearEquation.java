@@ -18,6 +18,9 @@ public class LinearEquation {
     public String slopes() {
         deltaY = yTwo - yOne;
         deltaX = xTwo - xOne;
+        if (deltaY % deltaX == 0)    {
+            return deltaY / deltaX + "x";
+        }
         return deltaY + "/"+ deltaX + "x";
     }
     public double getDoubleSlope()    {
@@ -35,8 +38,14 @@ public class LinearEquation {
         d = Math.round(d * 100) / 100.0;
         return d;
     }
+    public String equation()    {
+        if (intercept() < 0)    {
+            return "y = " + slopes() + " - " + Math.abs(intercept());
+        }
+        return "y = " + slopes() + " + " + intercept();
+    }
     public String lineInfo()  {
-        return"The equation of the line between these slopes is: y = " + slopes() + " + " + intercept() + "\nThe slope of this line is: " + getDoubleSlope() + "\nThe y-intercept of the line is: " + intercept() + "\nThe distance between the two points is: " + distance() ;
+        return"The equation of the line between these slopes is: " + equation() + "\nThe slope of this line is: " + getDoubleSlope() + "\nThe y-intercept of the line is: " + intercept() + "\nThe distance between the two points is: " + distance() ;
     }
     public String coordinateForX(double x) {
         xEquation = x;

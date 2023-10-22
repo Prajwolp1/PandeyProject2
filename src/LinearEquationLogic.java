@@ -62,5 +62,6 @@ public class LinearEquationLogic {
             System.out.print("Would you like to enter another pair of coordinates? y/n: ");
             goes = myScanner.nextLine();
         }
+        System.out.println("Thank you for using the slope calculator, goodbye!");
     }
 }
