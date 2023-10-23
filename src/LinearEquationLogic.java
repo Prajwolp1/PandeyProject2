@@ -25,7 +25,6 @@ public class LinearEquationLogic {
             System.out.print("Enter second coordinate: ");
             coord2 = myScanner.nextLine();
             System.out.println("");
-            System.out.println("The two points are " + coord1 + " and " + coord2);
             String strx1;
             String stry1;
             String strx2;
@@ -49,16 +48,30 @@ public class LinearEquationLogic {
             int x2 = Integer.parseInt(strx2);
             int y2 = Integer.parseInt(stry2);
 
-            LinearEquation coordy = new LinearEquation(x1, x2, y1, y2);
-            System.out.println(coordy.lineInfo());
-            System.out.println("");
-            System.out.print("Enter a value for x: ");
-            double x = myScanner.nextDouble();
-            myScanner.nextLine();
-            String findY = coordy.coordinateForX(x);
-            System.out.println(findY);
-            System.out.println("");
-
+            if (x1 == x2)   {
+                System.out.println("These points are on a veritcal line: x = " + x1);
+                System.out.println("");
+                System.out.print("Enter one of the new x coordinates: ");
+                int newx1 = myScanner.nextInt();
+                myScanner.nextLine();
+                System.out.print("Enter the second new x coordinates: ");
+                int newx2 = myScanner.nextInt();
+                myScanner.nextLine();
+                LinearEquation coor1 = new LinearEquation(newx1, newx2, y1, y2);
+                System.out.println("");
+                System.out.println(coor1.lineInfo());
+            } else {
+                    System.out.println("The two points are " + coord1 + " and " + coord2);
+                    LinearEquation coor2 = new LinearEquation(x1, x2, y1, y2);
+                    System.out.println(coor2.lineInfo());
+                    System.out.println("");
+                    System.out.print("Enter a value for x: ");
+                    double x = myScanner.nextDouble();
+                    myScanner.nextLine();
+                    String findY = coor2.coordinateForX(x);
+                    System.out.println(findY);
+                    System.out.println("");
+            }
             System.out.print("Would you like to enter another pair of coordinates? y/n: ");
             goes = myScanner.nextLine();
         }
