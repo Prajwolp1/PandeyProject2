@@ -43,12 +43,18 @@ public class LinearEquationLogic {
                 strx2 = coord2.substring(1, 2);
                 stry2 = coord2.substring(4, coord2.length() - 1);
             }
+            if (stry1.substring(0,1).equals(" "))    {
+                stry1 = stry1.substring(1);
+            }
+            if (stry2.substring(0,1).equals(" "))    {
+                stry2 = stry2.substring(1);
+            }
             int x1 = Integer.parseInt(strx1);
             int y1 = Integer.parseInt(stry1);
             int x2 = Integer.parseInt(strx2);
             int y2 = Integer.parseInt(stry2);
 
-            if (x1 == x2)   {
+            if (x1 == x2 && y1 != y2)   {
                 System.out.println("These points are on a veritcal line: x = " + x1);
                 System.out.println("");
                 System.out.print("Enter one of the new x coordinates: ");
