@@ -22,15 +22,15 @@ public class LinearEquationRunner {
 
 
             System.out.println("-------------- TESTING: REQUIRED TEST CASES --------------");
-            LinearEquation eq1 = new LinearEquation(-1, 5, 3, 10); // good for 5/4 slope
-            LinearEquation eq2 = new LinearEquation(-6, -2, 1, -1); // good for 1/7 slope
-            LinearEquation eq3 = new LinearEquation(2, 10, -1, 3); // good for 7/3 slope
-            LinearEquation eq4 = new LinearEquation(-1, 4, -7, 12); // good for -8/6 slope
-            LinearEquation eq5 = new LinearEquation(1, 4, 7, 12); // good for 8/6 slope
-            LinearEquation eq12 = new LinearEquation(3, 12, 7, 2); // good for -10/4 slope
-            LinearEquation eq13 = new LinearEquation(7, 12, 3, 2); // good for 10/4 slope
-            LinearEquation eq14 = new LinearEquation(7, 12, 3, 12); // good for horizontal
-            LinearEquation eq15 = new LinearEquation(16, -2, 3, -2); // good for horizontal
+            LinearEquation eq1 = new LinearEquation(-1, 3, 5, 10); // good for 5/4 slope
+            LinearEquation eq2 = new LinearEquation(-6, 1, -2, -1); // good for 1/7 slope
+            LinearEquation eq3 = new LinearEquation(2, -1, 10, 3); // good for 7/3 slope
+            LinearEquation eq4 = new LinearEquation(-1, -7, 4, 12); // good for -8/6 slope
+            LinearEquation eq5 = new LinearEquation(1, 7, 4, 12); // good for 8/6 slope
+            LinearEquation eq12 = new LinearEquation(3, 7, 12, 2); // good for -10/4 slope
+            LinearEquation eq13 = new LinearEquation(7, 3, 12, 2); // good for 10/4 slope
+            LinearEquation eq14 = new LinearEquation(7, 3, 12, 12); // good for horizontal
+            LinearEquation eq15 = new LinearEquation(16, 3, -2, -2); // good for horizontal
             System.out.println(eq1.equation());
             System.out.println(eq2.equation());
             System.out.println(eq3.equation());
@@ -43,18 +43,18 @@ public class LinearEquationRunner {
 
 
             System.out.println("-------------- TESTING: EXTRA CREDIT TEST CASES --------------");
-            LinearEquation eq6 = new LinearEquation(4, 0, 6, 10); // good for 5 slope
-            LinearEquation eq7 = new LinearEquation(7, 14, 5, 10); // good for 2 slope NO Y-INT
-            LinearEquation eq8 = new LinearEquation(6, 2, 8, -12); // good for -7 slope
-            LinearEquation eq9 = new LinearEquation(-1, 3, 2, 6); // good for +1 slope
-            LinearEquation eq10 = new LinearEquation(-1, 2, -3, 4); // good for -1 slope
-            LinearEquation eq11 = new LinearEquation(-2, -2, 4, 4); // good for line through origin
-            LinearEquation eq16 = new LinearEquation(0, 0, 4, 5); // good for 5/4 slope NO Y-INT
-            LinearEquation eq17 = new LinearEquation(6, 1, 3, 2); // -1/3 slope
-            LinearEquation eq20 = new LinearEquation(3, 2, 6, 1); // also -1/3
-            LinearEquation eq18 = new LinearEquation(3, 1, 6, 2); // 1/3
-            LinearEquation eq19 = new LinearEquation(6, 2, 3, 1); // also 1/3
-            LinearEquation eq21 = new LinearEquation(5, 0, 10, 0); // y = 0
+            LinearEquation eq6 = new LinearEquation(4, 6, 0, 10); // good for 5 slope
+            LinearEquation eq7 = new LinearEquation(7, 5, 14, 10); // good for 2 slope NO Y-INT
+            LinearEquation eq8 = new LinearEquation(6, 8, 2, -12); // good for -7 slope
+            LinearEquation eq9 = new LinearEquation(-1, 2, 3, 6); // good for +1 slope
+            LinearEquation eq10 = new LinearEquation(-1, -3, 2, 4); // good for -1 slope
+            LinearEquation eq11 = new LinearEquation(-2, 4, -2, 4); // good for line through origin
+            LinearEquation eq16 = new LinearEquation(0, 4, 0, 5); // good for 5/4 slope NO Y-INT
+            LinearEquation eq17 = new LinearEquation(6, 3, 1, 2); // -1/3 slope
+            LinearEquation eq20 = new LinearEquation(3, 6, 2, 1); // also -1/3
+            LinearEquation eq18 = new LinearEquation(3, 6, 1, 2); // 1/3
+            LinearEquation eq19 = new LinearEquation(6, 3, 2, 1); // also 1/3
+            LinearEquation eq21 = new LinearEquation(5, 10, 0, 0); // y = 0
             System.out.println(eq6.equation());
             System.out.println(eq7.equation());
             System.out.println(eq8.equation());
