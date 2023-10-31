@@ -18,10 +18,10 @@ public class LinearEquation {
     public String slopes() {
         deltaY = yTwo - yOne;
         deltaX = xTwo - xOne;
-        if (deltaY / deltaX == 1)   {
+        if ((double)deltaY / deltaX == 1.0)   {
             return "x";
         }
-        if (deltaY / deltaX == -1)  {
+        if ((double)deltaY / deltaX == -1)  {
             return "-x";
         }
         if (deltaY % deltaX == 0)    {
@@ -46,6 +46,9 @@ public class LinearEquation {
         }
         b = yOne - (((double) deltaY / deltaX) * xOne);
         b = roundedToHundredth(b);
+        if (b == 0.0)   {
+            return 0;
+        }
         return b;
     }
     public double distance()    {
@@ -61,6 +64,9 @@ public class LinearEquation {
             return "y = " + yintercept();
         }
         if (xOne == 0 && yOne == 0)  {
+            return "y = " + slopes();
+        }
+        if(yOne - (((double) (yTwo - yOne) / (xTwo - xOne)) * xOne) == 0)    {
             return "y = " + slopes();
         }
         if(yOne - (((double) (yTwo - yOne) / (xTwo - xOne)) * xOne) < 0)    {
